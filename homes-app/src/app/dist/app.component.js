@@ -7,16 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var core_1 = require("@angular/core");
+var home_component_1 = require("./home/home.component");
+var router_1 = require("@angular/router");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'homes';
+        this.title = "homes";
     }
     AppComponent = __decorate([
         core_1.Component({
             standalone: true,
-            selector: 'app-root',
-            template: "<h1>Audrey</h1>",
-            styleUrls: ['./app.component.css']
+            selector: "app-root",
+            template: "<main>\n    <header class=\"brand-name\">\n      <img\n        class=\"brand-logo\"\n        src=\"/assets/logo.svg\"\n        alt=\"logo\"\n        aria-hidden=\"true\"\n      />\n    </header>\n    <section class=\"content\">\n      <router-outlet></router-outlet>\n    </section>\n  </main>",
+            styleUrls: ["./app.component.css"],
+            imports: [home_component_1.HomeComponent, router_1.RouterModule]
         })
     ], AppComponent);
     return AppComponent;
